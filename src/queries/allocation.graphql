@@ -1,0 +1,10 @@
+query GetAllocation($id: ID!) {
+  allocation(id: $id) {
+    indexer {
+      id
+      defaultDisplayName
+      url
+    }
+  }
+}
+

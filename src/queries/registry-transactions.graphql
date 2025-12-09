@@ -1,0 +1,6 @@
+query RegistryGlobals {
+  global(id: "") {
+    txCount
+  }
+}
+

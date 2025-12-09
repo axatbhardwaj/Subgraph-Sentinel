@@ -1,0 +1,6 @@
+query AtaTransactions {
+  globals(where: { id: "" }) {
+    totalAtaTransactions
+  }
+}
+

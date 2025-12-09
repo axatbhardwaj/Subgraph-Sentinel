@@ -1,0 +1,14 @@
+{
+  _meta {
+    block {
+      number
+      hash
+    }
+  }
+  global(id: "") {
+    totalFeesIn
+    totalFeesInLegacyMech
+    totalFeesInLegacyMechMarketPlace
+  }
+}
+
