@@ -1,8 +1,5 @@
-import fs from "fs";
-import path from "path";
 import { formatEth, formatInt, formatPct } from "./alerts.js";
 import { store, getHistory, getSubs, saveSubs } from "./store.js";
-import { DATA_DIR } from "./config.js";
 import { InputFile } from "grammy";
 import { getSummaries } from "./analysis.js";
 
@@ -69,7 +66,10 @@ function registerCommands(bot) {
       await ctx.reply("No recent detailed report available.");
       return;
     }
-    await ctx.reply(report);
+    const ts = new Date().toISOString().replace(/[:.]/g, "-");
+    const filename = `report-${ctx.chat.id}-${ts}.md`;
+    const file = new InputFile(Buffer.from(report, "utf-8"), filename);
+    await ctx.replyWithDocument(file).catch((err) => console.error("Send document failed", err.message));
   });
 
   bot.command("help", async (ctx) => {
@@ -109,25 +109,10 @@ function registerCommands(bot) {
       return;
     }
     await ctx.answerCallbackQuery();
-    if (report.length > 3500) {
-      const ts = new Date().toISOString().replace(/[:.]/g, "-");
-      const filename = `report-${ctx.chat.id}-${ts}.md`;
-      const filepath = path.join(DATA_DIR, filename);
-      try {
-        await fs.promises.writeFile(filepath, report, "utf-8");
-        const file = new InputFile(fs.createReadStream(filepath), filename);
-        await ctx.replyWithDocument(file).catch((err) => console.error("Send document failed", err.message));
-        setTimeout(() => {
-          fs.promises.unlink(filepath).catch(() => {});
-        }, 10 * 60 * 1000);
-      } catch (err) {
-        console.error("Report file write failed:", err.message);
-        const file = new InputFile(Buffer.from(report, "utf-8"), filename);
-        await ctx.replyWithDocument(file).catch((e) => console.error("Send document failed", e.message));
-      }
-    } else {
-      await ctx.reply(report);
-    }
+    const ts = new Date().toISOString().replace(/[:.]/g, "-");
+    const filename = `report-${ctx.chat.id}-${ts}.md`;
+    const file = new InputFile(Buffer.from(report, "utf-8"), filename);
+    await ctx.replyWithDocument(file).catch((err) => console.error("Send document failed", err.message));
   });
 }
 

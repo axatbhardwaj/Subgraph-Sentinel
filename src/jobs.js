@@ -94,6 +94,7 @@ async function flushAlerts(bot, force = false) {
   let rotations = 0;
   let drops = 0;
   let analyses = 0;
+  const lastCounts = (await store.get("alerts:lastCounts")) || { rotations: 0, drops: 0, analyses: 0 };
   const rotationSamples = [];
   for (const msg of pending) {
     const lower = msg.toLowerCase();
@@ -107,9 +108,10 @@ async function flushAlerts(bot, force = false) {
   const samples = rotationSamples.length
     ? rotationSamples.slice(0, 2).map((m) => `• ${m.slice(0, 140)}`)
     : [];
+  const deltaRotations = rotations - (lastCounts.rotations || 0);
   const summary =
     pending.length > 5
-      ? `${pending.length} events. Indexer changes: ${rotations}, Drops: ${drops}, Analysis: ${analyses}.` +
+      ? `${pending.length} events. Indexer changes: ${rotations} (Δ ${deltaRotations >= 0 ? "+" : ""}${deltaRotations}), Drops: ${drops}, Analysis: ${analyses}.` +
         (samples.length ? `\nIndexer changes (examples):\n${samples.join("\n")}` : "") +
         `\nTap "View report" for details.`
       : detailText;
@@ -129,6 +131,7 @@ async function flushAlerts(bot, force = false) {
   appendLog({ type: "alert", messages: pending });
   await store.set("pending:alerts", []);
   await store.set("alerts:lastPush", now);
+  await store.set("alerts:lastCounts", { rotations, drops, analyses });
 }
 
 async function heartbeat() {
