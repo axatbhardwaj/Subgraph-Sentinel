@@ -1,0 +1,196 @@
+[
+  {
+    "timestamp": "2025-12-09T10:03:45.673Z",
+    "totals": {
+      "totalAtaTransactions": 9613790,
+      "totalTransactions": 12475293
+    },
+    "details": [
+      {
+        "name": "Gnosis MM",
+        "success": true,
+        "allocationId": "0x35abe5b5db2a20ae73cdfe31ab3efbabe4f1568f",
+        "indexer": "0xf92f430dd8567b0d466358c79594ab58d919a6d4",
+        "indexerName": "https://graph-l2prod.ellipfra.com/",
+        "value": 891978
+      },
+      {
+        "name": "Base MM",
+        "success": true,
+        "allocationId": "0x7887bb936a7c131cccef4ae4f5da90ffb51ca769",
+        "indexer": "0x35917c0eb91d2e21bef40940d028940484230c06",
+        "indexerName": "https://indexer.streamingfast.io",
+        "value": 14838
+      },
+      {
+        "name": "Legacy Mech",
+        "success": true,
+        "allocationId": null,
+        "indexer": null,
+        "indexerName": null,
+        "value": 8706974
+      },
+      {
+        "name": "Gnosis Registry",
+        "success": true,
+        "allocationId": "0x2d4460dcf83fe8bcf8a09aee60b2e7ebf7b10f07",
+        "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+        "indexerName": "https://indexer.upgrade.thegraph.com/",
+        "value": 12385754
+      },
+      {
+        "name": "Base Registry",
+        "success": true,
+        "allocationId": "0xe218976038e58146d01adb338f01e08faf452e28",
+        "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+        "indexerName": "https://graphprodl2.0xcryptovestor.com",
+        "value": 20982
+      },
+      {
+        "name": "Mode Registry",
+        "success": true,
+        "allocationId": null,
+        "indexer": null,
+        "indexerName": null,
+        "value": 32891
+      },
+      {
+        "name": "Optimism Registry",
+        "success": true,
+        "allocationId": "0xa6fef787485c409c2021b3631521104b7f6f68db",
+        "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+        "indexerName": "https://indexer.upgrade.thegraph.com/",
+        "value": 25428
+      },
+      {
+        "name": "Celo Registry",
+        "success": true,
+        "allocationId": "0xbb7763c5a0b9d7411265c2d2321721c6db88b183",
+        "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+        "indexerName": "https://indexer.upgrade.thegraph.com/",
+        "value": 176
+      },
+      {
+        "name": "Ethereum Registry",
+        "success": true,
+        "allocationId": "0x6c329d44be98cd3e835876f01f63e25344ae84a0",
+        "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+        "indexerName": "https://indexer.upgrade.thegraph.com/",
+        "value": 1371
+      },
+      {
+        "name": "Polygon Registry",
+        "success": true,
+        "allocationId": "0x9bc53787d0964905dddc6165e82f2805f2474004",
+        "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+        "indexerName": "https://indexer.upgrade.thegraph.com/",
+        "value": 8689
+      },
+      {
+        "name": "Arbitrum Registry",
+        "success": true,
+        "allocationId": "0x452acf3ee0bdf041d2c9541b3190f7fd0fc59c91",
+        "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+        "indexerName": "https://indexer.upgrade.thegraph.com/",
+        "value": 2
+      }
+    ]
+  },
+  {
+    "timestamp": "2025-12-09T10:59:28.827Z",
+    "totals": {
+      "totalAtaTransactions": 9614225,
+      "totalTransactions": 12475989
+    },
+    "details": [
+      {
+        "name": "Gnosis MM",
+        "success": true,
+        "allocationId": "0x35abe5b5db2a20ae73cdfe31ab3efbabe4f1568f",
+        "indexer": "0xf92f430dd8567b0d466358c79594ab58d919a6d4",
+        "indexerName": "https://graph-l2prod.ellipfra.com/",
+        "value": 892006
+      },
+      {
+        "name": "Base MM",
+        "success": true,
+        "allocationId": "0x7887bb936a7c131cccef4ae4f5da90ffb51ca769",
+        "indexer": "0x35917c0eb91d2e21bef40940d028940484230c06",
+        "indexerName": "https://indexer.streamingfast.io",
+        "value": 14842
+      },
+      {
+        "name": "Legacy Mech",
+        "success": true,
+        "allocationId": null,
+        "indexer": null,
+        "indexerName": null,
+        "value": 8707377
+      },
+      {
+        "name": "Gnosis Registry",
+        "success": true,
+        "allocationId": "0x2d4460dcf83fe8bcf8a09aee60b2e7ebf7b10f07",
+        "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+        "indexerName": "https://indexer.upgrade.thegraph.com/",
+        "value": 12386439
+      },
+      {
+        "name": "Base Registry",
+        "success": true,
+        "allocationId": "0xe218976038e58146d01adb338f01e08faf452e28",
+        "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+        "indexerName": "https://graphprodl2.0xcryptovestor.com",
+        "value": 20986
+      },
+      {
+        "name": "Mode Registry",
+        "success": true,
+        "allocationId": null,
+        "indexer": null,
+        "indexerName": null,
+        "value": 32891
+      },
+      {
+        "name": "Optimism Registry",
+        "success": true,
+        "allocationId": "0xa6fef787485c409c2021b3631521104b7f6f68db",
+        "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+        "indexerName": "https://indexer.upgrade.thegraph.com/",
+        "value": 25435
+      },
+      {
+        "name": "Celo Registry",
+        "success": true,
+        "allocationId": "0xbb7763c5a0b9d7411265c2d2321721c6db88b183",
+        "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+        "indexerName": "https://indexer.upgrade.thegraph.com/",
+        "value": 176
+      },
+      {
+        "name": "Ethereum Registry",
+        "success": true,
+        "allocationId": "0x6c329d44be98cd3e835876f01f63e25344ae84a0",
+        "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+        "indexerName": "https://indexer.upgrade.thegraph.com/",
+        "value": 1371
+      },
+      {
+        "name": "Polygon Registry",
+        "success": true,
+        "allocationId": "0x9bc53787d0964905dddc6165e82f2805f2474004",
+        "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+        "indexerName": "https://indexer.upgrade.thegraph.com/",
+        "value": 8689
+      },
+      {
+        "name": "Arbitrum Registry",
+        "success": true,
+        "allocationId": "0x452acf3ee0bdf041d2c9541b3190f7fd0fc59c91",
+        "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+        "indexerName": "https://indexer.upgrade.thegraph.com/",
+        "value": 2
+      }
+    ]
+  }
+]

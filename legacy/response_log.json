@@ -1,0 +1,1845 @@
+[
+  {
+    "timestamp": "2025-11-26T14:45:47.816Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xaa56000f15e192c9e39350655033a08068a0766db4612f5dc42b923f9e8684b6",
+          "number": 43343776
+        }
+      },
+      "global": {
+        "totalFeesIn": "72366470000000000000004",
+        "totalFeesInLegacyMech": "54952230000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414240000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T14:55:47.916Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x265181076a576d9979dc94d2996d546162ff6465b7ce27f2b90514d15f7340a2",
+          "number": 43343891
+        }
+      },
+      "global": {
+        "totalFeesIn": "72366570000000000000004",
+        "totalFeesInLegacyMech": "54952260000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414310000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T15:05:47.950Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x4d977e97e1ccfe777dc5fb504b1a48724b10adee917b5b3e522e10061d57c5ee",
+          "number": 43344007
+        }
+      },
+      "global": {
+        "totalFeesIn": "72366660000000000000004",
+        "totalFeesInLegacyMech": "54952280000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414380000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T15:15:48.063Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xc981c5776fb156025c3b268bb8fda74315a4153917fe6b3d7c23b98da7c74d1a",
+          "number": 43344126
+        }
+      },
+      "global": {
+        "totalFeesIn": "72366690000000000000004",
+        "totalFeesInLegacyMech": "54952300000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414390000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T15:25:48.198Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x21ebbbc45f54512d175fa112db0e46ea844a93fbc56bb5092c9b3a1475976293",
+          "number": 43344237
+        }
+      },
+      "global": {
+        "totalFeesIn": "72366690000000000000004",
+        "totalFeesInLegacyMech": "54952300000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414390000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T15:35:48.162Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x138462d91b0ef505321fc6cf556a166c404a215b012b37a22256dd401be36710",
+          "number": 43344358
+        }
+      },
+      "global": {
+        "totalFeesIn": "72366720000000000000004",
+        "totalFeesInLegacyMech": "54952330000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414390000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T15:45:48.325Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x7f6f1088126616e0271001927499e5e4b7966f590558b8d4f32ee0fa9f166753",
+          "number": 43344476
+        }
+      },
+      "global": {
+        "totalFeesIn": "72366720000000000000004",
+        "totalFeesInLegacyMech": "54952330000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414390000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T15:55:48.402Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xf2974699314166e4c78567d26606d75cc3fafeedadb7ec7d09fd9e7db85ec460",
+          "number": 43344591
+        }
+      },
+      "global": {
+        "totalFeesIn": "72366740000000000000004",
+        "totalFeesInLegacyMech": "54952340000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414400000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T16:05:48.465Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xfb5241a07ad7a922f9051b2ee14b7ef0f3b0f901312ede212f7d67373580654f",
+          "number": 43344703
+        }
+      },
+      "global": {
+        "totalFeesIn": "72366740000000000000004",
+        "totalFeesInLegacyMech": "54952340000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414400000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T16:15:48.962Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xdd2c59cd8f232919ca43689a948a0b69e203a6e98770945b94c64822fb341847",
+          "number": 43344824
+        }
+      },
+      "global": {
+        "totalFeesIn": "72366800000000000000004",
+        "totalFeesInLegacyMech": "54952380000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414420000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T16:25:48.708Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x044f461ea1812cf0c1e61f33e8731ffce6ad37e39b89ee7f3de76d0f836e400e",
+          "number": 43344928
+        }
+      },
+      "global": {
+        "totalFeesIn": "72366860000000000000004",
+        "totalFeesInLegacyMech": "54952420000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414440000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T16:35:48.776Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xcf932151864f43b657dea355702e084a561a93393e63fefce2c81bcc379e2d9f",
+          "number": 43345039
+        }
+      },
+      "global": {
+        "totalFeesIn": "72367010000000000000004",
+        "totalFeesInLegacyMech": "54952560000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414450000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T16:45:48.894Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x10a92922f84aadfc82d50accad578c2146d6c1a225386e0fa47635a41bd2764f",
+          "number": 43345174
+        }
+      },
+      "global": {
+        "totalFeesIn": "72367150000000000000004",
+        "totalFeesInLegacyMech": "54952690000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414460000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T16:55:48.957Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x2e1603257c832ceb6d694f4a8f85b38cb3c4f8b52172b07003d32315bf044943",
+          "number": 43345268
+        }
+      },
+      "global": {
+        "totalFeesIn": "72367260000000000000004",
+        "totalFeesInLegacyMech": "54952790000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414470000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T17:05:49.045Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x50fa87d8aed1bc578abe7e075165115b8483cf12800a4965b99ce42fa594163e",
+          "number": 43345408
+        }
+      },
+      "global": {
+        "totalFeesIn": "72367590000000000000004",
+        "totalFeesInLegacyMech": "54953090000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414500000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T17:15:49.286Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x662bbbc229878a397fedf96986b3ca534afe44f836a9f7fb9badd1cf863c489b",
+          "number": 43345526
+        }
+      },
+      "global": {
+        "totalFeesIn": "72367900000000000000004",
+        "totalFeesInLegacyMech": "54953390000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414510000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T17:25:49.263Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x9d5aee746b6bfb189394179eecaf8675283a5f4837483d3d943a4e12b078a8f3",
+          "number": 43345644
+        }
+      },
+      "global": {
+        "totalFeesIn": "72368110000000000000004",
+        "totalFeesInLegacyMech": "54953600000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414510000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T17:35:49.368Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x1267426dc81419ac8683f1337740f81703885c40044c42bc93c6ab9580ae07e1",
+          "number": 43345739
+        }
+      },
+      "global": {
+        "totalFeesIn": "72368210000000000000004",
+        "totalFeesInLegacyMech": "54953700000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414510000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T17:45:49.573Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x2dff05b7f31452ffa24fc69cf0f4607f639202a671bee7fc478efc3aa2a896b2",
+          "number": 43345878
+        }
+      },
+      "global": {
+        "totalFeesIn": "72368460000000000000004",
+        "totalFeesInLegacyMech": "54953940000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414520000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T17:55:49.771Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x155226006cdc677e55914c88748c401ce299c4d36566914ead5b31bf07a0a1f5",
+          "number": 43345990
+        }
+      },
+      "global": {
+        "totalFeesIn": "72368810000000000000004",
+        "totalFeesInLegacyMech": "54954290000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414520000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T18:05:49.715Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x2237b9697ba16d32128d7a35a038d7d428c0fbac3a178a80a52623f5eb11452e",
+          "number": 43346113
+        }
+      },
+      "global": {
+        "totalFeesIn": "72369180000000000000004",
+        "totalFeesInLegacyMech": "54954650000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414530000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T18:15:49.865Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x414b17829071ac876c455547038d9872a72988f88bcbf4c639eb8aa4efa6a574",
+          "number": 43346220
+        }
+      },
+      "global": {
+        "totalFeesIn": "72369470000000000000004",
+        "totalFeesInLegacyMech": "54954940000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414530000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T18:25:49.848Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xf022c4173eeab837a341a70e6b2a76c7b114ee4d24304715652e39928ddc899f",
+          "number": 43346333
+        }
+      },
+      "global": {
+        "totalFeesIn": "72369690000000000000004",
+        "totalFeesInLegacyMech": "54955160000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414530000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T18:35:49.938Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x2258307d26ac43ecb531343829a00eee1f87099134c01e22819407bdde98b180",
+          "number": 43346449
+        }
+      },
+      "global": {
+        "totalFeesIn": "72369870000000000000004",
+        "totalFeesInLegacyMech": "54955340000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414530000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T18:45:50.135Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xdc5c22475b000fe7e104607be915967bef1754b4f5bcd4e00c74ab728761d51c",
+          "number": 43346583
+        }
+      },
+      "global": {
+        "totalFeesIn": "72370090000000000000004",
+        "totalFeesInLegacyMech": "54955560000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414530000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T18:55:50.480Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xd98a2eddeb0bd8db291bf6a0f0226491a28d390a43ef7e00b5212493a1b9d53f",
+          "number": 43346682
+        }
+      },
+      "global": {
+        "totalFeesIn": "72370200000000000000004",
+        "totalFeesInLegacyMech": "54955670000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414530000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T19:05:50.428Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x3768db037bb25a5615bdd1606b22f8cfe5cbd715c98fe9083dd8518db82647ac",
+          "number": 43346794
+        }
+      },
+      "global": {
+        "totalFeesIn": "72370260000000000000004",
+        "totalFeesInLegacyMech": "54955730000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414530000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T19:15:50.327Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xdd0a6d7192e58afcf9c05715380c99147e6cedd2023358529dc88e9fcaba4ef2",
+          "number": 43346928
+        }
+      },
+      "global": {
+        "totalFeesIn": "72370390000000000000004",
+        "totalFeesInLegacyMech": "54955850000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414540000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T19:25:50.424Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x62ae70d4f10afedbab2870daf93c093325efa718e9faa40f9f7b120a6b702353",
+          "number": 43347022
+        }
+      },
+      "global": {
+        "totalFeesIn": "72370510000000000000004",
+        "totalFeesInLegacyMech": "54955950000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414560000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T19:35:50.533Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x3679fa5cd255f924176c9120de51447f0e5a2952595c2d9da15205dc72cbf8d7",
+          "number": 43347150
+        }
+      },
+      "global": {
+        "totalFeesIn": "72370710000000000000004",
+        "totalFeesInLegacyMech": "54956100000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414610000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T19:45:50.909Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x4629e431c3b577ada61d1a918fd41765afafb23504f4baf50e5522405bc940da",
+          "number": 43347261
+        }
+      },
+      "global": {
+        "totalFeesIn": "72370870000000000000004",
+        "totalFeesInLegacyMech": "54956230000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414640000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T19:55:50.780Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x9597bbb57d9c87056b88b87dc911708ac342f6b700f28067ebbb0d80407af816",
+          "number": 43347396
+        }
+      },
+      "global": {
+        "totalFeesIn": "72371020000000000000004",
+        "totalFeesInLegacyMech": "54956380000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414640000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T20:05:50.783Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x080be4554e19fd15674cd33d3b8296b9ba70137f0431b5437bd69e08b59a3537",
+          "number": 43347507
+        }
+      },
+      "global": {
+        "totalFeesIn": "72371170000000000000004",
+        "totalFeesInLegacyMech": "54956530000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414640000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T20:15:50.861Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xad1d4bf515f0c527c2a60c9af464cbef1365f5f856f215815fcea65ea849697c",
+          "number": 43347629
+        }
+      },
+      "global": {
+        "totalFeesIn": "72371500000000000000004",
+        "totalFeesInLegacyMech": "54956850000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414650000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T20:25:51.229Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x8bc3b32e423541d007330844b82059947cf4cd27d475703e4b049c1ea6adbe82",
+          "number": 43347729
+        }
+      },
+      "global": {
+        "totalFeesIn": "72371810000000000000004",
+        "totalFeesInLegacyMech": "54957130000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414680000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T20:35:51.183Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x0b4c44904fa3dc17b38bf1df0a15819150b4859e769878a8c1fc649cf927749e",
+          "number": 43347845
+        }
+      },
+      "global": {
+        "totalFeesIn": "72372070000000000000004",
+        "totalFeesInLegacyMech": "54957360000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414710000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T20:45:51.215Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x6876c1111dfb46c76b2f792a9f92cc006d2347a6dc898e0b614c26cb7639f2e4",
+          "number": 43347982
+        }
+      },
+      "global": {
+        "totalFeesIn": "72372390000000000000004",
+        "totalFeesInLegacyMech": "54957590000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414800000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T20:55:51.493Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x4b25b04e7491d47c05365fc4857fc6b8ba7fc44994ddf2bc5fc940b1c85fb049",
+          "number": 43348098
+        }
+      },
+      "global": {
+        "totalFeesIn": "72372520000000000000004",
+        "totalFeesInLegacyMech": "54957700000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17414820000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T21:05:51.406Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xd512ad3a96c7490383c637a6c684f43a46207653b6c1adf64ad1bc0dab283791",
+          "number": 43348215
+        }
+      },
+      "global": {
+        "totalFeesIn": "71385720000000000000004",
+        "totalFeesInLegacyMech": "54547850000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16837870000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T21:15:51.449Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x3711e044c3f5175284f2d6226a07d31d4cab41c110727246cc72e4d5aa21ddec",
+          "number": 43348331
+        }
+      },
+      "global": {
+        "totalFeesIn": "71385940000000000000004",
+        "totalFeesInLegacyMech": "54548020000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16837920000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T21:25:51.636Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x46a5d0e3db0c101498200256b6c9c4e206242f975df18eb3a4dce850f6b4d605",
+          "number": 43348446
+        }
+      },
+      "global": {
+        "totalFeesIn": "71386470000000000000004",
+        "totalFeesInLegacyMech": "54548220000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16838250000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T21:35:51.545Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x7827f2c3eaa71a42de137940fd976f1e4d3fbd0dde42d3b9870a76346b4e0274",
+          "number": 43348562
+        }
+      },
+      "global": {
+        "totalFeesIn": "72374220000000000000004",
+        "totalFeesInLegacyMech": "54958380000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17415840000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T21:45:51.622Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xd824bc9e594bb38df09f23b91aa8c6442b252719c62668e14cb2e155cc16597e",
+          "number": 43348678
+        }
+      },
+      "global": {
+        "totalFeesIn": "72374740000000000000004",
+        "totalFeesInLegacyMech": "54958500000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17416240000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T21:55:51.698Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x469ae5d197a00ec6fd51da87f7d49acf165b12e955190046dc7602d073c83de7",
+          "number": 43348797
+        }
+      },
+      "global": {
+        "totalFeesIn": "72375220000000000000004",
+        "totalFeesInLegacyMech": "54958580000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17416640000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T22:05:51.710Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x3c484c80fa610897abc7b572257c2c83f2291d9db7055ea4bd01e3ed71cfdf36",
+          "number": 43348905
+        }
+      },
+      "global": {
+        "totalFeesIn": "72375700000000000000004",
+        "totalFeesInLegacyMech": "54958700000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17417000000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T22:15:51.895Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xce9ef638586a21355b2fd79c33f8c3ed533063e525d509afc778e3b63d9681e0",
+          "number": 43349030
+        }
+      },
+      "global": {
+        "totalFeesIn": "71389310000000000000004",
+        "totalFeesInLegacyMech": "54548890000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16840420000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T22:25:51.903Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xbcec7488c58908d0158f57473222a52197f380c0e678d61b092c0d1d17ad71b4",
+          "number": 43349148
+        }
+      },
+      "global": {
+        "totalFeesIn": "71390100000000000000004",
+        "totalFeesInLegacyMech": "54549200000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16840900000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T22:35:52.127Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x1271bf453a31fa419d3bf85140584b1a65387e69d999834045334a2e8c668a45",
+          "number": 43349258
+        }
+      },
+      "global": {
+        "totalFeesIn": "72377780000000000000004",
+        "totalFeesInLegacyMech": "54959350000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17418430000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T22:45:52.106Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x43e8fbf5715a4cd0311ccb0ac6575378dad5893170ea282b34c3f24254e6c343",
+          "number": 43349382
+        }
+      },
+      "global": {
+        "totalFeesIn": "71391630000000000000004",
+        "totalFeesInLegacyMech": "54549620000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16842010000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T22:55:52.288Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x747d83ce187f42057aa340b546db8a665c2a50f7a605db35d16a6a2b1c93aaee",
+          "number": 43349497
+        }
+      },
+      "global": {
+        "totalFeesIn": "71392560000000000000004",
+        "totalFeesInLegacyMech": "54549800000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16842760000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T23:05:52.249Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x190b95b241538bb26abe21c06d9c2769c28a4edfb9af395d2b50dc2997b3ab32",
+          "number": 43349614
+        }
+      },
+      "global": {
+        "totalFeesIn": "71393630000000000000004",
+        "totalFeesInLegacyMech": "54549940000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16843690000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T23:15:52.302Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x23fac325ae938caad0401fbba6cc63b5dd199cc0f955f3a32b6300ab9ecf321a",
+          "number": 43349721
+        }
+      },
+      "global": {
+        "totalFeesIn": "72381370000000000000004",
+        "totalFeesInLegacyMech": "54960000000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17421370000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T23:25:52.412Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xb2ca3644576186de55b409699b4a378fdce954428742ce5a32847af244cf2285",
+          "number": 43349848
+        }
+      },
+      "global": {
+        "totalFeesIn": "71395180000000000000004",
+        "totalFeesInLegacyMech": "54550210000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16844970000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T23:35:52.477Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x5bdd7a613d3140f91042fdaea26027c70226544f1093bad01d035708afb11901",
+          "number": 43349965
+        }
+      },
+      "global": {
+        "totalFeesIn": "71396280000000000000004",
+        "totalFeesInLegacyMech": "54550400000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16845880000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T23:45:52.621Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x834c9cbb6343ccec0b9a0707867d05aa12c5c3d904b8ea7d0b3f980e6e38f8c7",
+          "number": 43350079
+        }
+      },
+      "global": {
+        "totalFeesIn": "71397400000000000000004",
+        "totalFeesInLegacyMech": "54550580000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16846820000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-26T23:55:52.542Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x9a099caa0bdf790de48e4fa5726546fa834ed87c3ced2a06f085a2edecfeb0b7",
+          "number": 43350193
+        }
+      },
+      "global": {
+        "totalFeesIn": "71398630000000000000004",
+        "totalFeesInLegacyMech": "54550720000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16847910000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T00:05:52.705Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x46ca7d40119eda623145c6eebbe0fa6c3395bfe41d87036abedd7f3ae0139e34",
+          "number": 43350310
+        }
+      },
+      "global": {
+        "totalFeesIn": "71399670000000000000004",
+        "totalFeesInLegacyMech": "54550810000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16848860000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T00:15:52.740Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x9a01ec40c0ca922cd2c41baf11cb0bda979ca28486d03f1cf67c218a0def2685",
+          "number": 43350429
+        }
+      },
+      "global": {
+        "totalFeesIn": "72387540000000000000004",
+        "totalFeesInLegacyMech": "54960840000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17426700000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T00:25:52.938Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xf9126fcbd964271c9fc802e0bd96799c738f8621e7e0cd6cf86e1c46750a080e",
+          "number": 43350547
+        }
+      },
+      "global": {
+        "totalFeesIn": "71400860000000000000004",
+        "totalFeesInLegacyMech": "54551020000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16849840000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T00:35:53.037Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xe84ad20fb71733ac4544d2d002560af59602804f76197a3c65fab09d63e3417e",
+          "number": 43350658
+        }
+      },
+      "global": {
+        "totalFeesIn": "72387970000000000000004",
+        "totalFeesInLegacyMech": "54961040000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17426930000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T00:45:53.018Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xed49bfb5d3f12c86b222f9e4602f2a81730ef12275337d7daa9279ec304b812a",
+          "number": 43350781
+        }
+      },
+      "global": {
+        "totalFeesIn": "72388450000000000000004",
+        "totalFeesInLegacyMech": "54961070000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17427380000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T00:55:53.113Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xa977d02790b48a048a26c38e9ce4b7d1710b41e02dbfdc81d6202b8e97b805d0",
+          "number": 43350899
+        }
+      },
+      "global": {
+        "totalFeesIn": "72388620000000000000004",
+        "totalFeesInLegacyMech": "54961140000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17427480000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T01:05:53.270Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xb7a3abc52810036347fbe4f0b987b190951b55b6cf8e9a3eea2bc566c557a02b",
+          "number": 43351017
+        }
+      },
+      "global": {
+        "totalFeesIn": "71402030000000000000004",
+        "totalFeesInLegacyMech": "54551240000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16850790000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T01:15:53.449Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x4b759d229bbd59997d3238ba1956323a4501587d4109b8cef4ac9bf04401026a",
+          "number": 43351131
+        }
+      },
+      "global": {
+        "totalFeesIn": "71402780000000000000004",
+        "totalFeesInLegacyMech": "54551310000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16851470000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T01:25:53.666Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xfb24071e36eb232806138d810465236b821ed298fce22db10b80d6e5b4f21228",
+          "number": 43351248
+        }
+      },
+      "global": {
+        "totalFeesIn": "71404150000000000000004",
+        "totalFeesInLegacyMech": "54551790000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16852360000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T01:35:53.420Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xa1de5b233fc157719ae0e6b737e73e6d9b27dba77a4b858c96c1c4c4f1c96331",
+          "number": 43351363
+        }
+      },
+      "global": {
+        "totalFeesIn": "71405860000000000000004",
+        "totalFeesInLegacyMech": "54552490000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16853370000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T01:45:53.515Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x32af142e684cbdb66d1624167bc206d084724dae49ea2f51ab86a4a40b32393b",
+          "number": 43351472
+        }
+      },
+      "global": {
+        "totalFeesIn": "72394280000000000000004",
+        "totalFeesInLegacyMech": "54963070000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17431210000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T01:55:53.587Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xae6a303d3f657dd5ddede4fe98d8593bf1c61c18cb320521faa850517ece1aef",
+          "number": 43351593
+        }
+      },
+      "global": {
+        "totalFeesIn": "72395910000000000000004",
+        "totalFeesInLegacyMech": "54963720000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17432190000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T02:05:53.909Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xf39a225dfc04eb5155536b9d13fb66d71278375683b072e145b90a6db4b24297",
+          "number": 43351712
+        }
+      },
+      "global": {
+        "totalFeesIn": "72397550000000000000004",
+        "totalFeesInLegacyMech": "54964330000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17433220000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T02:15:53.790Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x4ad367f5b53aa441ed3e216ab84fa48306b7e6639e6d530225dd83d13fd8f357",
+          "number": 43351820
+        }
+      },
+      "global": {
+        "totalFeesIn": "72399010000000000000004",
+        "totalFeesInLegacyMech": "54964790000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17434220000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T02:25:54.139Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x9ebedda2a97382ca36b18073909b116c40dbc6cfd8738d33b0044126ae4bc889",
+          "number": 43351950
+        }
+      },
+      "global": {
+        "totalFeesIn": "71412440000000000000004",
+        "totalFeesInLegacyMech": "54554970000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16857470000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T02:35:54.058Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x732c2003792cc1541639ddc97bb86bf77badfac45795958115a0313bce4382b4",
+          "number": 43352064
+        }
+      },
+      "global": {
+        "totalFeesIn": "71412660000000000000004",
+        "totalFeesInLegacyMech": "54555060000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16857600000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T02:45:54.168Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x7496f1b6ee32523b0b90bcbbe7785f83ed49a4eeb273860094a72ea9411d047c",
+          "number": 43352178
+        }
+      },
+      "global": {
+        "totalFeesIn": "71413630000000000000004",
+        "totalFeesInLegacyMech": "54555140000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16858490000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T02:55:54.127Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x0f0183c4ceaa5ac634715b98fc3f883bac3887f046cb17f5bd20ada612e4fd78",
+          "number": 43352297
+        }
+      },
+      "global": {
+        "totalFeesIn": "71414640000000000000004",
+        "totalFeesInLegacyMech": "54555240000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16859400000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T03:05:54.322Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x0cd176051cc206b4ccf311b2984cc3679050cce88f2176843b667d95e2666a8e",
+          "number": 43352415
+        }
+      },
+      "global": {
+        "totalFeesIn": "71415730000000000000004",
+        "totalFeesInLegacyMech": "54555340000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16860390000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T03:15:54.404Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x49125963db100d7fcfdbfbb63f0bcad63d6d33112b00d8e513569b42bb495cb8",
+          "number": 43352530
+        }
+      },
+      "global": {
+        "totalFeesIn": "71416820000000000000004",
+        "totalFeesInLegacyMech": "54555410000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16861410000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T03:25:54.511Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x57135da0e9729c7bce56031d7122b11efaa27620efd20b3835b26df328dcb224",
+          "number": 43352649
+        }
+      },
+      "global": {
+        "totalFeesIn": "72404790000000000000004",
+        "totalFeesInLegacyMech": "54965460000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17439330000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T03:35:54.690Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x6e5d54be11e6383f0b80c8d27a54e2c6e9a7f263501362304e4da8479fb73c7a",
+          "number": 43352765
+        }
+      },
+      "global": {
+        "totalFeesIn": "71418880000000000000004",
+        "totalFeesInLegacyMech": "54555660000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16863220000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T03:45:54.600Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xfd772a27acdcb412d29aa27a0a523cc37917708c827718ad357d28bef31d2b97",
+          "number": 43352885
+        }
+      },
+      "global": {
+        "totalFeesIn": "72406690000000000000004",
+        "totalFeesInLegacyMech": "54965750000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17440940000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T03:55:54.725Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x4c7067784bd2b46481286da42a81a3c0616c1c8d839fe86dafbad64e391db45a",
+          "number": 43353000
+        }
+      },
+      "global": {
+        "totalFeesIn": "71419980000000000000004",
+        "totalFeesInLegacyMech": "54555950000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16864030000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T04:05:54.627Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xee8d1146c83cc37f5214d1cad3e6f1d9122ab4e9f03b96627d78912c76766767",
+          "number": 43353119
+        }
+      },
+      "global": {
+        "totalFeesIn": "71420280000000000000004",
+        "totalFeesInLegacyMech": "54556010000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16864270000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T04:15:54.752Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x4f66cee423364eba4c7f87733dee472cdc653631e5017cf86cc49f3551d5cd00",
+          "number": 43353230
+        }
+      },
+      "global": {
+        "totalFeesIn": "72407620000000000000004",
+        "totalFeesInLegacyMech": "54965980000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17441640000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T04:25:54.734Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xa2b931a8e125fc13b52bb5bbbc8913448cf0d90f84c6b050b6d30c79d5c0f006",
+          "number": 43353355
+        }
+      },
+      "global": {
+        "totalFeesIn": "71422230000000000000004",
+        "totalFeesInLegacyMech": "54556150000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16866080000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T04:35:54.903Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x1b79c80bcdaf7069f8db3eb3a646377033763200eaa88a92fcdfb9d1e345fa8a",
+          "number": 43353473
+        }
+      },
+      "global": {
+        "totalFeesIn": "71424090000000000000004",
+        "totalFeesInLegacyMech": "54556160000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16867930000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T04:45:55.051Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x4091ebb9b4388c5f14587b7dfab4ddf782a44e01e402ab699ca5c20f2a0b612c",
+          "number": 43353577
+        }
+      },
+      "global": {
+        "totalFeesIn": "72412760000000000000004",
+        "totalFeesInLegacyMech": "54966260000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17446500000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T04:55:55.109Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x950038beff6048b2f23b404e9445b9124616e8ff6f58f3d235027dff7ced3914",
+          "number": 43353706
+        }
+      },
+      "global": {
+        "totalFeesIn": "71427870000000000000004",
+        "totalFeesInLegacyMech": "54556490000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16871380000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T05:05:55.208Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x95adce6d41cfdebfcda98bb20997454a259453f028bdafcd5d85beb4697b37a1",
+          "number": 43353816
+        }
+      },
+      "global": {
+        "totalFeesIn": "72416740000000000000004",
+        "totalFeesInLegacyMech": "54966580000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17450160000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T05:15:55.324Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x271f9f34b743f3ca1b6ee2c2446eb3b2b8b22208513190eee4c611274c235365",
+          "number": 43353941
+        }
+      },
+      "global": {
+        "totalFeesIn": "72418190000000000000004",
+        "totalFeesInLegacyMech": "54966730000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17451460000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T05:25:55.408Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xabf385715b35f1cce30dc66fc563a3ebe3f3b19444e5838966f4c0f64dc11206",
+          "number": 43354050
+        }
+      },
+      "global": {
+        "totalFeesIn": "72418870000000000000004",
+        "totalFeesInLegacyMech": "54967130000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17451740000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T05:35:55.402Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x18a8f4c77c4c2f04767dd44eadf52e9b7df84b3f591e89ab8a88fde4d1b51161",
+          "number": 43354173
+        }
+      },
+      "global": {
+        "totalFeesIn": "71432910000000000000004",
+        "totalFeesInLegacyMech": "54557670000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16875240000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T05:45:55.551Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x882c36feda08985a94416fafc79d6316e853225ad973a8c32117d7a43fd596ab",
+          "number": 43354289
+        }
+      },
+      "global": {
+        "totalFeesIn": "71433690000000000000004",
+        "totalFeesInLegacyMech": "54558210000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16875480000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T05:55:55.605Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x887bf2a4d946ffa87feb623a888eea3dd8e17795e67c60f77f2369a0f1382ae9",
+          "number": 43354407
+        }
+      },
+      "global": {
+        "totalFeesIn": "71434460000000000000004",
+        "totalFeesInLegacyMech": "54558750000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16875710000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T06:05:56.054Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xc2cbb22a33fdb29d39c3f6c9ceba88de763fde0ce1087033238db061af905b2b",
+          "number": 43354523
+        }
+      },
+      "global": {
+        "totalFeesIn": "72422190000000000000004",
+        "totalFeesInLegacyMech": "54969190000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17453000000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T06:15:55.818Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x7728573a08d26dc85b51cc9e5aee27671beae8b8607566ae24f93c14c8dfcd8e",
+          "number": 43354634
+        }
+      },
+      "global": {
+        "totalFeesIn": "72422880000000000000004",
+        "totalFeesInLegacyMech": "54969610000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17453270000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T06:25:55.943Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0xdd70b434a7600702c3ea52972731767b90806eecf42d70580a093acb9bc23d30",
+          "number": 43354760
+        }
+      },
+      "global": {
+        "totalFeesIn": "71437430000000000000004",
+        "totalFeesInLegacyMech": "54560310000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16877120000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T06:35:56.069Z",
+    "allocationId": "0x9308485166235ef8067dd7be14a017cf39fdc0fc",
+    "indexer": "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491",
+    "indexerName": "https://indexer.upgrade.thegraph.com/",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x78e331426f4d4e74ce21fdd3d7fda2f865c88abc86a0867f8c003fe607c96e7f",
+          "number": 43354875
+        }
+      },
+      "global": {
+        "totalFeesIn": "71438950000000000000004",
+        "totalFeesInLegacyMech": "54561000000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "16877950000000000000000"
+      }
+    }
+  },
+  {
+    "timestamp": "2025-11-27T06:47:04.748Z",
+    "allocationId": "0x4d07deddc57d269188de837ab3cb2effb61cb309",
+    "indexer": "0x7bb834017672b1135466661d8dd69c5dd0b3bf51",
+    "indexerName": "https://graphprodl2.0xcryptovestor.com",
+    "data": {
+      "_meta": {
+        "block": {
+          "hash": "0x46db7660fc2578ce0fa030f743a78ff92ea18e29af0689403a0c189131ccaf75",
+          "number": 43354996
+        }
+      },
+      "global": {
+        "totalFeesIn": "72427790000000000000004",
+        "totalFeesInLegacyMech": "54971720000000000000004",
+        "totalFeesInLegacyMechMarketPlace": "17456070000000000000000"
+      }
+    }
+  }
+]
