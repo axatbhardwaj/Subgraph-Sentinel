@@ -1,0 +1,18 @@
+{
+  "name": "subgraph-monitoring-bot",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "start": "bun run src/bot.js"
+  },
+  "dependencies": {
+    "@keyv/sqlite": "^4.0.6",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.12.0",
+    "grammy": "^1.28.0",
+    "graphql-request": "^7.1.0",
+    "keyv": "^4.5.4",
+    "keyv-file": "^5.3.3"
+  }
+}
+
