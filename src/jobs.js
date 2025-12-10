@@ -177,8 +177,13 @@ const buildPoll = (bot) => async () => {
   const alerts = [];
   alerts.push(...(await handleFees()));
   alerts.push(...(await handleKpis()));
+  const dropsInBatch = alerts.reduce(
+    (acc, msg) => acc + (msg.toLowerCase().includes("fell") || msg.includes("↓") ? 1 : 0),
+    0
+  );
   await queueAlerts(alerts);
-  appendLog({ type: "poll", alertsCount: alerts.length });
+  const pending = ((await store.get("pending:alerts")) || []).length;
+  appendLog({ type: "poll", alertsCount: alerts.length, dropsInBatch, pending });
   const summaries = await getSummaries();
   if (summaries.length) {
     const messages = summaries.map(
