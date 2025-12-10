@@ -133,7 +133,14 @@ function registerCommands(bot) {
           s.max
         )} (Δ ${formatInt(s.spread)}, ${formatPct(s.pct)}), latest ${s.latestIndexer || "n/a"}`
     );
-    await ctx.reply(lines.join("\n"));
+    const body = lines.join("\n");
+    const ts = new Date().toISOString().replace(/[:.]/g, "-");
+    const filename = `analyze-${ctx.chat.id}-${ts}.md`;
+    const file = new InputFile(Buffer.from(body, "utf-8"), filename);
+    await ctx.replyWithDocument(file).catch((err) => {
+      console.error("Send analyze document failed", err.message);
+      ctx.reply(body).catch(() => { });
+    });
   });
 
   bot.callbackQuery("report", async (ctx) => {
