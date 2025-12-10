@@ -2,9 +2,10 @@ import { Bot } from "grammy";
 import { BOT_TOKEN, INTERVAL_MS } from "./config.js";
 import { buildPoll, startHeartbeat } from "./jobs.js";
 import { registerCommands } from "./commands.js";
+import { logger } from "./logger.js";
 
 if (!BOT_TOKEN) {
-  console.error("Missing TELEGRAM_BOT_TOKEN in .env");
+  logger.error("Missing TELEGRAM_BOT_TOKEN in .env");
   process.exit(1);
 }
 
@@ -21,11 +22,11 @@ const boot = async () => {
 };
 
 boot().catch((err) => {
-  console.error("Bot failed to start:", err.message);
+  logger.error({ msg: "Bot failed to start", error: err.message });
   process.exit(1);
 });
 
 bot.catch = (err) => {
-  console.error("Grammy error:", err.error?.description || err.message);
+  logger.error({ msg: "Grammy error", error: err.error?.description || err.message });
 };
 

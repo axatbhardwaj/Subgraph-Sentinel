@@ -2,6 +2,7 @@ import { formatEth, formatInt, formatPct } from "./alerts.js";
 import { store, getHistory, getSubs, saveSubs } from "./store.js";
 import { InputFile } from "grammy";
 import { getSummaries } from "./analysis.js";
+import { logger } from "./logger.js";
 
 function registerCommands(bot) {
   bot.command("start", async (ctx) => {
@@ -79,7 +80,7 @@ function registerCommands(bot) {
     }
     const filename = `report-${reportId}.md`;
     const file = new InputFile(Buffer.from(report, "utf-8"), filename);
-    await ctx.replyWithDocument(file).catch((err) => console.error("Send document failed", err.message));
+    await ctx.replyWithDocument(file).catch((err) => logger.error({ msg: "Send document failed", error: err.message }));
   });
 
   bot.command("help", async (ctx) => {
@@ -143,7 +144,7 @@ function registerCommands(bot) {
     });
   });
 
-  bot.callbackQuery("report", async (ctx) => {
+  bot.callbackQuery(/^report:/, async (ctx) => {
     const data = ctx.callbackQuery.data || "";
     const id = data.includes(":") ? data.split(":")[1] : null;
     const reportId = id || (await store.get("last:report:id"));

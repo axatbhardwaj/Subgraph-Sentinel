@@ -9,11 +9,19 @@ import {
 import { fetchSubgraph, gatewayUrl, resolveUrl } from "./graph.js";
 import { resolveIndexer } from "./attestation.js";
 import { feeAlerts, kpiAlerts, kpiValue, formatInt, formatPct } from "./alerts.js";
-import { store, pushHistory, getSubs, appendLog } from "./store.js";
+import { store, pushHistory, getSubs } from "./store.js";
+import { logger } from "./logger.js";
 import { recordSample, getSummaries } from "./analysis.js";
 import { recordSampleHistory } from "./history.js";
 
 const nowIso = () => new Date().toISOString();
+
+let lock = Promise.resolve();
+const withLock = (fn) => {
+  const next = lock.then(fn);
+  lock = next.catch(() => { });
+  return next;
+};
 
 async function handleFees() {
   const url = gatewayUrl(FEES_SUBGRAPH_ID);
@@ -97,79 +105,83 @@ async function handleKpis() {
 
 async function queueAlerts(messages) {
   if (!messages.length) return;
-  const pending = (await store.get("pending:alerts")) || [];
-  await store.set("pending:alerts", [...pending, ...messages]);
+  await withLock(async () => {
+    const pending = (await store.get("pending:alerts")) || [];
+    await store.set("pending:alerts", [...pending, ...messages]);
+  });
 }
 
 async function flushAlerts(bot, force = false) {
-  const last = (await store.get("alerts:lastPush")) || 0;
-  const now = Date.now();
-  if (!force && now - last < ALERT_SEND_INTERVAL_MS) return;
-  const pending = (await store.get("pending:alerts")) || [];
-  if (!pending.length) return;
-  const subs = await getSubs();
-  if (!subs.length) return;
-  const detailText = pending.map((m) => `• ${m}`).join("\n");
-  let rotations = 0;
-  let drops = 0;
-  let analyses = 0;
-  const lastCounts = (await store.get("alerts:lastCounts")) || { rotations: 0, drops: 0, analyses: 0 };
-  const rotationSamples = [];
-  for (const msg of pending) {
-    const lower = msg.toLowerCase();
-    if (lower.includes("indexer rotated")) {
-      rotations += 1;
-      if (rotationSamples.length < 3) rotationSamples.push(msg);
+  await withLock(async () => {
+    const last = (await store.get("alerts:lastPush")) || 0;
+    const now = Date.now();
+    if (!force && now - last < ALERT_SEND_INTERVAL_MS) return;
+    const pending = (await store.get("pending:alerts")) || [];
+    if (!pending.length) return;
+    const subs = await getSubs();
+    if (!subs.length) return;
+    const detailText = pending.map((m) => `• ${m}`).join("\n");
+    let rotations = 0;
+    let drops = 0;
+    let analyses = 0;
+    const lastCounts = (await store.get("alerts:lastCounts")) || { rotations: 0, drops: 0, analyses: 0 };
+    const rotationSamples = [];
+    for (const msg of pending) {
+      const lower = msg.toLowerCase();
+      if (lower.includes("indexer rotated")) {
+        rotations += 1;
+        if (rotationSamples.length < 3) rotationSamples.push(msg);
+      }
+      if (lower.includes("fell") || lower.includes("↓")) drops += 1;
+      if (msg.startsWith("Analysis ")) analyses += 1;
     }
-    if (lower.includes("fell") || lower.includes("↓")) drops += 1;
-    if (msg.startsWith("Analysis ")) analyses += 1;
-  }
-  const samples = rotationSamples.length
-    ? rotationSamples.slice(0, 2).map((m) => `• ${m.slice(0, 140)}`)
-    : [];
-  const deltaRotations = rotations - (lastCounts.rotations || 0);
-  const summary =
-    pending.length > 5
-      ? `${pending.length} events. Indexer changes: ${rotations} (Δ ${deltaRotations >= 0 ? "+" : ""}${deltaRotations}), Drops: ${drops}, Analysis: ${analyses}.` +
+    const samples = rotationSamples.length
+      ? rotationSamples.slice(0, 2).map((m) => `• ${m.slice(0, 140)}`)
+      : [];
+    const deltaRotations = rotations - (lastCounts.rotations || 0);
+    const summary =
+      pending.length > 5
+        ? `${pending.length} events. Indexer changes: ${rotations} (Δ ${deltaRotations >= 0 ? "+" : ""}${deltaRotations}), Drops: ${drops}, Analysis: ${analyses}.` +
         (samples.length ? `\nIndexer changes (examples):\n${samples.join("\n")}` : "") +
         `\nTap "View report" for details.`
-      : detailText;
-  const reportId = `rep-${Date.now()}-${Math.random().toString(16).slice(2, 8)}`;
-  const reply_markup =
-    pending.length > 5
-      ? { inline_keyboard: [[{ text: "View report", callback_data: `report:${reportId}` }]] }
-      : undefined;
-  const hasDrops = drops > 0;
-  if (hasDrops) {
-    await Promise.all(
-      subs.map((chatId) =>
-        bot.api
-          .sendMessage(chatId, summary, { parse_mode: "Markdown", reply_markup: reply_markup })
-          .catch((err) => console.error("Send failed", chatId, err.message))
-      )
-    );
-    await store.set(`report:${reportId}`, detailText);
-    await store.set("last:report", detailText);
-    await store.set("last:report:id", reportId);
-    const recent = (await store.get("reports:recent")) || [];
-    const nextRecent = [reportId, ...recent].slice(0, 20);
-    await store.set("reports:recent", nextRecent);
-  }
-  await Promise.all(pending.map((m) => pushHistory(m)));
-  appendLog({ type: "alert", messages: pending });
-  await store.set("pending:alerts", []);
-  await store.set("alerts:lastPush", now);
-  await store.set("alerts:lastCounts", { rotations, drops, analyses });
+        : detailText;
+    const reportId = `rep-${Date.now()}-${Math.random().toString(16).slice(2, 8)}`;
+    const reply_markup =
+      pending.length > 5
+        ? { inline_keyboard: [[{ text: "View report", callback_data: `report:${reportId}` }]] }
+        : undefined;
+    const hasDrops = drops > 0;
+    if (hasDrops) {
+      await Promise.all(
+        subs.map((chatId) =>
+          bot.api
+            .sendMessage(chatId, summary, { parse_mode: "Markdown", reply_markup: reply_markup })
+            .catch((err) => logger.error({ msg: "Send failed", chatId, error: err.message }))
+        )
+      );
+      await store.set(`report:${reportId}`, detailText);
+      await store.set("last:report", detailText);
+      await store.set("last:report:id", reportId);
+      const recent = (await store.get("reports:recent")) || [];
+      const nextRecent = [reportId, ...recent].slice(0, 20);
+      await store.set("reports:recent", nextRecent);
+    }
+    await Promise.all(pending.map((m) => pushHistory(m)));
+    logger.info({ type: "alert", messages: pending });
+    await store.set("pending:alerts", []);
+    await store.set("alerts:lastPush", now);
+    await store.set("alerts:lastCounts", { rotations, drops, analyses });
+  });
 }
 
 async function heartbeat() {
   if (!UPTIME_KUMA_PUSH_URL) return;
   try {
     await fetch(UPTIME_KUMA_PUSH_URL);
-    appendLog({ type: "heartbeat", status: "ok" });
+    logger.info({ type: "heartbeat", status: "ok" });
   } catch (err) {
-    console.error("Heartbeat failed:", err.message);
-    appendLog({ type: "heartbeat", status: "fail", error: err.message });
+    logger.error({ msg: "Heartbeat failed", error: err.message });
+    logger.info({ type: "heartbeat", status: "fail", error: err.message });
   }
 }
 
@@ -183,7 +195,7 @@ const buildPoll = (bot) => async () => {
   );
   await queueAlerts(alerts);
   const pending = ((await store.get("pending:alerts")) || []).length;
-  appendLog({ type: "poll", alertsCount: alerts.length, dropsInBatch, pending });
+  logger.info({ type: "poll", alertsCount: alerts.length, dropsInBatch, pending });
   const summaries = await getSummaries();
   if (summaries.length) {
     const messages = summaries.map(
