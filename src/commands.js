@@ -91,8 +91,32 @@ function registerCommands(bot) {
         "/history - recent alerts",
         "/analyze - recent indexer inconsistencies",
         "/report - last detailed alert batch",
+        "/explain - what the bot monitors and how alerts work",
         "/alerts - subscription status",
         "/help - this message",
+      ].join("\n")
+    );
+  });
+
+  bot.command("explain", async (ctx) => {
+    await ctx.reply(
+      [
+        "Subgraph Sentinel monitors The Graph subgraphs for:",
+        "- Fee regressions (legacy fees) on the legacy fees subgraph.",
+        "- New mech marketplace fee subgraphs (Gnosis/Base) for USD fee totals.",
+        "- KPI drops and indexer rotations on ATA Transactions and Total Transactions in registry subgraphs.",
+        "",
+        "Polling & alerts:",
+        "- Polls every 5 minutes.",
+        "- Only sends Telegram when drops are detected (since all of the above metrics should always increase); batches include a summary and a 'View report' button.",
+        "- Reports are stored with unique IDs; use /report <id> or tap the button to fetch the detail (.md).",
+        "",
+        "Analysis:",
+        "- Keeps a short recent window per subgraph; flags rotations, drops, and value spread across indexers.",
+        "- /analyze shows recent inconsistencies per subgraph (indexer count, range, delta).",
+        "",
+        "Data:",
+        "- State and history stored in SQLite at data/state.sqlite (samples table plus bot state).",
       ].join("\n")
     );
   });
