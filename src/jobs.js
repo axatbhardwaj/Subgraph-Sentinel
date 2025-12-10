@@ -11,6 +11,7 @@ import { resolveIndexer } from "./attestation.js";
 import { feeAlerts, kpiAlerts, kpiValue, formatInt, formatPct } from "./alerts.js";
 import { store, pushHistory, getSubs, appendLog } from "./store.js";
 import { recordSample, getSummaries } from "./analysis.js";
+import { recordSampleHistory } from "./history.js";
 
 const nowIso = () => new Date().toISOString();
 
@@ -29,6 +30,15 @@ async function handleFees() {
     indexer: indexerId,
     indexerName: indexerInfo?.name || null,
     ts: nowIso(),
+  });
+  recordSampleHistory({
+    ts: nowIso(),
+    name: "Legacy Fees",
+    type: "FEES",
+    value: Number(current.totalFeesIn ?? 0),
+    indexer: indexerId,
+    indexerName: indexerInfo?.name || null,
+    payload: current,
   });
   return alerts;
 }
@@ -52,6 +62,15 @@ async function handleSubgraph(entry) {
   };
   await store.set(`kpi:last:${entry.name}`, sample);
   await recordSample(entry.name, sample);
+  recordSampleHistory({
+    ts: sample.ts,
+    name: entry.name,
+    type: entry.type,
+    value,
+    indexer: indexerId,
+    indexerName: indexerInfo?.name || null,
+    payload: res.data,
+  });
   return { value, alerts };
 }
 
@@ -115,18 +134,27 @@ async function flushAlerts(bot, force = false) {
         (samples.length ? `\nIndexer changes (examples):\n${samples.join("\n")}` : "") +
         `\nTap "View report" for details.`
       : detailText;
+  const reportId = `rep-${Date.now()}-${Math.random().toString(16).slice(2, 8)}`;
   const reply_markup =
     pending.length > 5
-      ? { inline_keyboard: [[{ text: "View report", callback_data: "report" }]] }
+      ? { inline_keyboard: [[{ text: "View report", callback_data: `report:${reportId}` }]] }
       : undefined;
-  await Promise.all(
-    subs.map((chatId) =>
-      bot.api
-        .sendMessage(chatId, summary, { parse_mode: "Markdown", reply_markup })
-        .catch((err) => console.error("Send failed", chatId, err.message))
-    )
-  );
-  await store.set("last:report", detailText);
+  const hasDrops = drops > 0;
+  if (hasDrops) {
+    await Promise.all(
+      subs.map((chatId) =>
+        bot.api
+          .sendMessage(chatId, summary, { parse_mode: "Markdown", reply_markup: reply_markup })
+          .catch((err) => console.error("Send failed", chatId, err.message))
+      )
+    );
+    await store.set(`report:${reportId}`, detailText);
+    await store.set("last:report", detailText);
+    await store.set("last:report:id", reportId);
+    const recent = (await store.get("reports:recent")) || [];
+    const nextRecent = [reportId, ...recent].slice(0, 20);
+    await store.set("reports:recent", nextRecent);
+  }
   await Promise.all(pending.map((m) => pushHistory(m)));
   appendLog({ type: "alert", messages: pending });
   await store.set("pending:alerts", []);

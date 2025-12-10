@@ -61,13 +61,23 @@ function registerCommands(bot) {
   });
 
   bot.command("report", async (ctx) => {
-    const report = await store.get("last:report");
-    if (!report) {
-      await ctx.reply("No recent detailed report available.");
+    const parts = (ctx.message?.text || "").trim().split(/\s+/);
+    const requestedId = parts.length > 1 ? parts[1] : null;
+    let reportId = requestedId || (await store.get("last:report:id"));
+    if (!reportId) {
+      const recent = (await store.get("reports:recent")) || [];
+      reportId = recent[0];
+    }
+    if (!reportId) {
+      await ctx.reply("No report available.");
       return;
     }
-    const ts = new Date().toISOString().replace(/[:.]/g, "-");
-    const filename = `report-${ctx.chat.id}-${ts}.md`;
+    const report = await store.get(`report:${reportId}`);
+    if (!report) {
+      await ctx.reply("Report not found.");
+      return;
+    }
+    const filename = `report-${reportId}.md`;
     const file = new InputFile(Buffer.from(report, "utf-8"), filename);
     await ctx.replyWithDocument(file).catch((err) => console.error("Send document failed", err.message));
   });
@@ -103,14 +113,20 @@ function registerCommands(bot) {
   });
 
   bot.callbackQuery("report", async (ctx) => {
-    const report = await store.get("last:report");
+    const data = ctx.callbackQuery.data || "";
+    const id = data.includes(":") ? data.split(":")[1] : null;
+    const reportId = id || (await store.get("last:report:id"));
+    if (!reportId) {
+      await ctx.answerCallbackQuery({ text: "No recent report", show_alert: false });
+      return;
+    }
+    const report = await store.get(`report:${reportId}`);
     if (!report) {
       await ctx.answerCallbackQuery({ text: "No recent report", show_alert: false });
       return;
     }
     await ctx.answerCallbackQuery();
-    const ts = new Date().toISOString().replace(/[:.]/g, "-");
-    const filename = `report-${ctx.chat.id}-${ts}.md`;
+    const filename = `report-${reportId}.md`;
     const file = new InputFile(Buffer.from(report, "utf-8"), filename);
     await ctx.replyWithDocument(file).catch((err) => console.error("Send document failed", err.message));
   });

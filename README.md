@@ -31,5 +31,5 @@ NEXT_PUBLIC_MODE_REGISTRY_SUBGRAPH_URL= # Mode registry URL (full HTTP)
 
 ## Notes
 - Polls every 5 minutes. Summaries send every 5 minutes (configurable via `ALERT_SEND_INTERVAL_MS`). Early exits when URLs or keys are missing to stay quiet.
-- State persisted in `data/state.sqlite` via KeyV + SQLite; no external DB install required.
+- State and historical samples are persisted in `data/state.sqlite` (KeyV + SQLite and a `samples` table); no external DB install required.
 - GraphQL queries live in `src/queries/*.graphql` and are loaded as raw strings.
