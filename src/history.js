@@ -35,7 +35,15 @@ function recordSampleHistory({ ts, name, type, value, indexer, indexerName, payl
 }
 
 function getSamples(from, to) {
-  return db.query("SELECT * FROM samples WHERE ts >= ? AND ts <= ? ORDER BY ts ASC").all(from, to);
+  return db
+    .query("SELECT * FROM samples WHERE ts >= ? AND ts <= ? ORDER BY ts ASC")
+    .all(from, to)
+    .map((r) => {
+      try {
+        if (r.payload) r.payload = JSON.parse(r.payload);
+      } catch { }
+      return r;
+    });
 }
 
 export { recordSampleHistory, getSamples };
