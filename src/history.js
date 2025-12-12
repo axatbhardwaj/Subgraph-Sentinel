@@ -34,5 +34,9 @@ function recordSampleHistory({ ts, name, type, value, indexer, indexerName, payl
   );
 }
 
-export { recordSampleHistory };
+function getSamples(from, to) {
+  return db.query("SELECT * FROM samples WHERE ts >= ? AND ts <= ? ORDER BY ts ASC").all(from, to);
+}
+
+export { recordSampleHistory, getSamples };
 

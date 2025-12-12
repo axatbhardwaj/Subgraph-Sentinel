@@ -1,5 +1,6 @@
 import { formatEth, formatInt, formatPct } from "./alerts.js";
 import { store, getHistory, getSubs, saveSubs } from "./store.js";
+import { getSamples } from "./history.js";
 import { InputFile } from "grammy";
 import { getSummaries } from "./analysis.js";
 import { logger } from "./logger.js";
@@ -83,6 +84,51 @@ function registerCommands(bot) {
     await ctx.replyWithDocument(file).catch((err) => logger.error({ msg: "Send document failed", error: err.message }));
   });
 
+  bot.command("dump", async (ctx) => {
+    const parts = (ctx.message?.text || "").trim().split(/\s+/);
+    if (parts.length < 3) {
+      await ctx.reply("Usage: /dump <DD-MM-YY> <DD-MM-YY>");
+      return;
+    }
+
+    const parseDate = (str) => {
+      const p = str.split("-");
+      if (p.length !== 3) return null;
+      const d = parseInt(p[0], 10);
+      const m = parseInt(p[1], 10) - 1;
+      let y = parseInt(p[2], 10);
+      if (y < 100) y += 2000;
+      const date = new Date(Date.UTC(y, m, d));
+      return isNaN(date.getTime()) ? null : date;
+    };
+
+    const start = parseDate(parts[1]);
+    const end = parseDate(parts[2]);
+
+    if (!start || !end) {
+      await ctx.reply("Invalid date format. Use DD-MM-YY.");
+      return;
+    }
+
+    end.setUTCHours(23, 59, 59, 999);
+
+    try {
+      const samples = getSamples(start.toISOString(), end.toISOString());
+      if (!samples.length) {
+        await ctx.reply("No data found for this period.");
+        return;
+      }
+
+      const json = JSON.stringify(samples, null, 2);
+      const filename = `dump-${parts[1]}-to-${parts[2]}.json`;
+      const file = new InputFile(Buffer.from(json, "utf-8"), filename);
+      await ctx.replyWithDocument(file);
+    } catch (err) {
+      logger.error({ msg: "Dump failed", error: err.message });
+      await ctx.reply("Failed to generate dump.");
+    }
+  });
+
   bot.command("help", async (ctx) => {
     await ctx.reply(
       [
@@ -92,6 +138,7 @@ function registerCommands(bot) {
         "/history - recent alerts",
         "/analyze - recent indexer inconsistencies",
         "/report - last detailed alert batch",
+        "/dump - export logs (DD-MM-YY DD-MM-YY)",
         "/explain - what the bot monitors and how alerts work",
         "/alerts - subscription status",
         "/help - this message",
