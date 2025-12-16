@@ -33,6 +33,7 @@ export const ALLOCATION_QUERY = loadQuery("allocation.graphql");
 
 export const FEES_SUBGRAPH_ID = "JCYjvfTErSkkFYjGedMHPnTcySpeB1Z81FLYUuEjWXK3";
 export const NETWORK_SUBGRAPH_ID = "DZz4kDTdmzWLWsV373w2bSmoar3umKKH9y82SUKr5qmp";
+export const UPGRADE_INDEXER_ID = "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491";
 
 export const SUBGRAPHS = [
   { name: "Gnosis MM", id: "5uBbKaSyWZaenxc2frFWqSASoXP952Yh2HheDdczqVoM", query: ATA_QUERY, type: "ATA" },
