@@ -5,6 +5,7 @@ import {
   UPTIME_KUMA_PUSH_URL,
   UPTIME_KUMA_INTERVAL_MS,
   ALERT_SEND_INTERVAL_MS,
+  UPGRADE_INDEXER_ID,
 } from "./config.js";
 import { fetchSubgraph, gatewayUrl, resolveUrl } from "./graph.js";
 import { resolveIndexer } from "./attestation.js";
