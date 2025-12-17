@@ -46,7 +46,8 @@ function kpiValue(data, type) {
 
 function kpiAlerts(name, value, prevValue, indexer, prevIndexer) {
   const alerts = [];
-  if (Number.isFinite(prevValue) && value < prevValue) {
+  // Only alert if the value has fallen by at least 1 unit, avoiding floating point equality issues or "same value" noise
+  if (Number.isFinite(prevValue) && value < prevValue && Math.abs(prevValue - value) >= 0.0001) {
     alerts.push(`${name}: value fell ${formatInt(prevValue)} → ${formatInt(value)}`);
   }
   if (prevIndexer && indexer && prevIndexer !== indexer) {
