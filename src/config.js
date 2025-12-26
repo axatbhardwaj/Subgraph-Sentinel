@@ -36,12 +36,12 @@ export const NETWORK_SUBGRAPH_ID = "DZz4kDTdmzWLWsV373w2bSmoar3umKKH9y82SUKr5qmp
 export const UPGRADE_INDEXER_ID = "0xbdfb5ee5a2abf4fc7bb1bd1221067aef7f9de491";
 
 export const SUBGRAPHS = [
-  { name: "Gnosis MM", id: "5uBbKaSyWZaenxc2frFWqSASoXP952Yh2HheDdczqVoM", query: ATA_QUERY, type: "ATA", indexer: UPGRADE_INDEXER_ID },
+  { name: "Gnosis MM", id: "5uBbKaSyWZaenxc2frFWqSASoXP952Yh2HheDdczqVoM", query: ATA_QUERY, type: "ATA", indexer: UPGRADE_INDEXER_ID, deploymentId: "QmabxEMFqZefVogxgLVaEHAoGgTLzJrVPgi8yoa4PZTamh" },
   { name: "Base MM", id: "vqXaQBmE9KTwF68BAYPFs7HwjPLpqKjDbtx3wXjTH5p", query: ATA_QUERY, type: "ATA" },
   { name: "Legacy Mech", env: "NEXT_PUBLIC_GNOSIS_LM_SUBGRAPH_URL", query: ATA_QUERY, type: "ATA" },
-  { name: "Gnosis New Mech Fees", id: "FVimvzJV7aFP3GLzhL8uTXsDmPD9Wzp6tEBtzPsHfd3K", query: NEW_MECH_FEES_QUERY, type: "FEES_USD", indexer: UPGRADE_INDEXER_ID },
+  { name: "Gnosis New Mech Fees", id: "FVimvzJV7aFP3GLzhL8uTXsDmPD9Wzp6tEBtzPsHfd3K", query: NEW_MECH_FEES_QUERY, type: "FEES_USD", indexer: UPGRADE_INDEXER_ID, deploymentId: "QmXhJ7w2J2fReYkRLjGM9QGKNEzBqSX81nLcSKpN676xvB" },
   { name: "Base New Mech Fees", id: "8a7YpqVVhiJBfLjFMwtH3jmHFUMAahfeHHGbh9vU26Tk", query: NEW_MECH_FEES_QUERY, type: "FEES_USD" },
-  { name: "Gnosis Registry", id: "GmDw6a6EfP6z58dzkw5WehpxjaiEKB6aZRk4TNUm3DPn", query: REGISTRY_QUERY, type: "REGISTRY", indexer: UPGRADE_INDEXER_ID },
+  { name: "Gnosis Registry", id: "GmDw6a6EfP6z58dzkw5WehpxjaiEKB6aZRk4TNUm3DPn", query: REGISTRY_QUERY, type: "REGISTRY", indexer: UPGRADE_INDEXER_ID, deploymentId: "QmWZvSePaMQMX3LHTZyGmwZvFbGhm23t6Pa7iiVrRoqCnf" },
   { name: "Base Registry", id: "Baqj7bPWWQKw8HXwfqbMZnFhkSamuUYFa3JgCRYF8Tcr", query: REGISTRY_QUERY, type: "REGISTRY" },
   { name: "Mode Registry", env: "NEXT_PUBLIC_MODE_REGISTRY_SUBGRAPH_URL", query: REGISTRY_QUERY, type: "REGISTRY" },
   { name: "Optimism Registry", id: "BksA3aj8vX68TVs91ieDoGzFGASuLC7BaYo2HsGCea7p", query: REGISTRY_QUERY, type: "REGISTRY" },

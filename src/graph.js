@@ -1,17 +1,18 @@
 import { rawRequest } from "graphql-request";
 import { GRAPH_API_KEY } from "./config.js";
 
-const gatewayUrl = (id, indexer = null) => {
+const gatewayUrl = (id, indexer = null, deploymentId = null) => {
   if (!GRAPH_API_KEY) return "";
   if (indexer) {
-    return `https://gateway.thegraph.com/api/${GRAPH_API_KEY}/deployments/id/${id}/indexers/id/${indexer}`;
+    const targetId = deploymentId || id;
+    return `https://gateway.thegraph.com/api/${GRAPH_API_KEY}/deployments/id/${targetId}/indexers/id/${indexer}`;
   }
   return `https://gateway.thegraph.com/api/${GRAPH_API_KEY}/subgraphs/id/${id}`;
 };
 
 const resolveUrl = (entry) => {
   if (entry.env) return process.env[entry.env] || "";
-  if (entry.id) return gatewayUrl(entry.id, entry.indexer);
+  if (entry.id) return gatewayUrl(entry.id, entry.indexer, entry.deploymentId);
   return "";
 };
 
