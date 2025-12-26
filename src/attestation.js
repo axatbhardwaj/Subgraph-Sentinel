@@ -30,7 +30,8 @@ async function lookupAllocation(allocationId) {
   if (!allocationId || !GRAPH_API_KEY) return null;
   const url = gatewayUrl(NETWORK_SUBGRAPH_ID);
   try {
-    const { allocation } = await request(url, ALLOCATION_QUERY, { id: allocationId });
+    const headers = { "Authorization": `Bearer ${GRAPH_API_KEY}` };
+    const { allocation } = await request(url, ALLOCATION_QUERY, { id: allocationId }, headers);
     if (!allocation) return null;
     const name = allocation.indexer.defaultDisplayName || allocation.indexer.url || "Unknown";
     return { indexer: allocation.indexer.id, name };
