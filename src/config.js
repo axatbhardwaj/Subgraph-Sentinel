@@ -10,6 +10,7 @@ const loadQuery = (filename) =>
 
 export const BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 export const GRAPH_API_KEY = process.env.GRAPH_GATEWAY_API_KEY || "";
+export const GRAPH_API_KEY_2 = process.env.GRAPH_GATEWAY_API_KEY2 || "";
 export const INTERVAL_MS = 5 * 60 * 1000;
 export const DATA_DIR = path.join(ROOT, "data");
 fs.mkdirSync(DATA_DIR, { recursive: true });

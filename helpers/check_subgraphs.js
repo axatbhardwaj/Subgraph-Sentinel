@@ -1,6 +1,5 @@
-import { request } from "graphql-request";
-import { GRAPH_API_KEY, NETWORK_SUBGRAPH_ID } from "../src/config.js";
-import { gatewayUrl } from "../src/graph.js";
+import { NETWORK_SUBGRAPH_ID } from "../src/config.js";
+import { gatewayUrl, fetchSubgraph } from "../src/graph.js";
 
 const SUBGRAPH_IDS = [
   "5uBbKaSyWZaenxc2frFWqSASoXP952Yh2HheDdczqVoM", // Gnosis MM
@@ -32,12 +31,13 @@ const query = `
 
 async function run() {
   console.log(`Checking subgraphs: ${SUBGRAPH_IDS.join(", ")}`);
-  try {
-    const headers = { "Authorization": `Bearer ${GRAPH_API_KEY}` };
-    const data = await request(url, query, { ids: SUBGRAPH_IDS }, headers);
-    console.log(JSON.stringify(data, null, 2));
-  } catch (err) {
-    console.error("Error:", err.message);
+
+  const result = await fetchSubgraph(url, query, { ids: SUBGRAPH_IDS });
+
+  if (result.error) {
+    console.error("Error:", result.error);
+  } else {
+    console.log(JSON.stringify(result.data, null, 2));
   }
 }
 
