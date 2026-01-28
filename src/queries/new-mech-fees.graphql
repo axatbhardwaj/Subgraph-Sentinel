@@ -1,7 +1,0 @@
-query NewMechFeesTotals {
-  global(id: "") {
-    totalFeesInUSD
-    totalFeesOutUSD
-  }
-}
-
