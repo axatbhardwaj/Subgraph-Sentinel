@@ -1,6 +1,7 @@
 node_modules
 bun.lockb
 data/
+.claude/
 *.log
 # Logs
 logs
