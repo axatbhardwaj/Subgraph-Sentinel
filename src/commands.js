@@ -1,8 +1,8 @@
-import { formatEth, formatInt, formatPct } from "./alerts.js";
 import { store, getHistory, getSubs, saveSubs } from "./store.js";
-import { getSamples } from "./history.js";
+import { getAll, addEndpoint, removeEndpoint } from "./endpoints.js";
+import { runSyncChecks, getSyncStatus, formatLag } from "./sync.js";
+import { SYNC_LAG_THRESHOLD, POLL_CONCURRENCY } from "./config.js";
 import { InputFile } from "grammy";
-import { getSummaries } from "./analysis.js";
 import { logger } from "./logger.js";
 
 function registerCommands(bot) {
@@ -12,7 +12,7 @@ function registerCommands(bot) {
       subs.push(ctx.chat.id);
       await saveSubs(subs);
     }
-    await ctx.reply("Subscribed to subgraph alerts. Use /mute to stop.");
+    await ctx.reply("Subscribed to sync alerts. Use /mute to stop.");
   });
 
   bot.command("mute", async (ctx) => {
@@ -23,18 +23,27 @@ function registerCommands(bot) {
   });
 
   bot.command("status", async (ctx) => {
-    const fees = (await store.get("fees:last")) || {};
-    const totals = (await store.get("kpi:totals")) || {};
-    const feeLine = fees.global
-      ? `Fees: ${formatEth(fees.global.totalFeesIn)} (legacy ${formatEth(
-          fees.global.totalFeesInLegacyMech
-        )}, market ${formatEth(fees.global.totalFeesInLegacyMechMarketPlace)})`
-      : "Fees: n/a";
-    const ataLine = `ATA: ${formatInt(totals.totalAta ?? 0)}`;
-    const txLine = `Total transactions: ${formatInt(
-      totals.totalTransactions ?? totals.totalRegistry ?? 0
-    )}`;
-    await ctx.reply([feeLine, ataLine, txLine].join("\n"));
+    const endpoints = getAll();
+    if (!endpoints.length) {
+      await ctx.reply("No endpoints configured.");
+      return;
+    }
+
+    const statuses = await Promise.all(
+      endpoints.slice(0, 10).map(async (ep) => {
+        const sync = await getSyncStatus(ep.name);
+        const emoji = sync.status === "ok" ? "🟢"
+          : sync.status === "lagging" ? "🔴"
+          : sync.status === "indexing-error" ? "⚠️"
+          : sync.status === "error" ? "❌"
+          : "⚪";
+        const lagStr = sync.lag !== null ? ` (lag: ${formatLag(sync.lag)})` : "";
+        return `${emoji} ${ep.name}${lagStr}`;
+      })
+    );
+
+    const more = endpoints.length > 10 ? `\n\n... and ${endpoints.length - 10} more. Use /endpoints for full list.` : "";
+    await ctx.reply(statuses.join("\n") + more);
   });
 
   bot.command("history", async (ctx) => {
@@ -57,7 +66,7 @@ function registerCommands(bot) {
     const on = subs.includes(ctx.chat.id);
     await ctx.reply(
       on
-        ? "Alerts are ON for this chat. Signals: fee drops, KPI drops, indexer rotations, fetch failures."
+        ? "Alerts are ON for this chat. Signals: sync lag, indexing errors, fetch failures."
         : "Alerts are OFF. Use /start to subscribe."
     );
   });
@@ -84,62 +93,19 @@ function registerCommands(bot) {
     await ctx.replyWithDocument(file).catch((err) => logger.error({ msg: "Send document failed", error: err.message }));
   });
 
-  bot.command("dump", async (ctx) => {
-    const parts = (ctx.message?.text || "").trim().split(/\s+/);
-    if (parts.length < 3) {
-      await ctx.reply("Usage: /dump <DD-MM-YY> <DD-MM-YY>");
-      return;
-    }
-
-    const parseDate = (str) => {
-      const p = str.split("-");
-      if (p.length !== 3) return null;
-      const d = parseInt(p[0], 10);
-      const m = parseInt(p[1], 10) - 1;
-      let y = parseInt(p[2], 10);
-      if (y < 100) y += 2000;
-      const date = new Date(Date.UTC(y, m, d));
-      return isNaN(date.getTime()) ? null : date;
-    };
-
-    const start = parseDate(parts[1]);
-    const end = parseDate(parts[2]);
-
-    if (!start || !end) {
-      await ctx.reply("Invalid date format. Use DD-MM-YY.");
-      return;
-    }
-
-    end.setUTCHours(23, 59, 59, 999);
-
-    try {
-      const samples = getSamples(start.toISOString(), end.toISOString());
-      if (!samples.length) {
-        await ctx.reply("No data found for this period.");
-        return;
-      }
-
-      const json = JSON.stringify(samples, null, 2);
-      const filename = `dump-${parts[1]}-to-${parts[2]}.json`;
-      const file = new InputFile(Buffer.from(json, "utf-8"), filename);
-      await ctx.replyWithDocument(file);
-    } catch (err) {
-      logger.error({ msg: "Dump failed", error: err.message });
-      await ctx.reply("Failed to generate dump.");
-    }
-  });
-
   bot.command("help", async (ctx) => {
     await ctx.reply(
       [
         "/start - subscribe to alerts",
         "/mute - stop alerts",
-        "/status - latest totals",
+        "/status - top 10 endpoints with sync status",
         "/history - recent alerts",
-        "/analyze - recent indexer inconsistencies",
+        "/check - run sync checks manually",
         "/report - last detailed alert batch",
-        "/dump - export logs (DD-MM-YY DD-MM-YY)",
-        "/explain - what the bot monitors and how alerts work",
+        "/endpoints - list all endpoints with status",
+        "/endpoint_add - add endpoint (<chain> <url> <name>)",
+        "/endpoint_remove - remove endpoint",
+        "/explain - what the bot monitors",
         "/alerts - subscription status",
         "/help - this message",
       ].join("\n")
@@ -149,46 +115,132 @@ function registerCommands(bot) {
   bot.command("explain", async (ctx) => {
     await ctx.reply(
       [
-        "Subgraph Sentinel monitors The Graph subgraphs for:",
-        "- Fee regressions (legacy fees) on the legacy fees subgraph.",
-        "- New mech marketplace fee subgraphs (Gnosis/Base) for USD fee totals.",
-        "- KPI drops and indexer rotations on ATA Transactions and Total Transactions in registry subgraphs.",
+        "Subgraph Sentinel monitors The Graph subgraphs for sync status:",
         "",
-        "Polling & alerts:",
-        "- Polls every 5 minutes.",
-        "- Only sends Telegram when drops are detected (since all of the above metrics should always increase); batches include a summary and a 'View report' button.",
-        "- Reports are stored with unique IDs; use /report <id> or tap the button to fetch the detail (.md).",
+        "What it checks:",
+        `- Block lag: subgraph block vs chain head (threshold: ${SYNC_LAG_THRESHOLD} blocks)`,
+        "- Indexing errors: _meta.hasIndexingErrors flag",
+        "- Fetch failures: GraphQL endpoint unreachable",
         "",
-        "Analysis:",
-        "- Keeps a short recent window per subgraph; flags rotations, drops, and value spread across indexers.",
-        "- /analyze shows recent inconsistencies per subgraph (indexer count, range, delta).",
+        "Alerts:",
+        "- 🔴 Lagging: subgraph is more than threshold blocks behind",
+        "- ⚠️ Indexing errors: subgraph reports indexing problems",
+        "- ❌ Fetch failed: couldn't reach the subgraph endpoint",
+        "- 🟢 Recovered: issue resolved",
         "",
-        "Data:",
-        "- State and history stored in SQLite at data/state.sqlite (samples table plus bot state).",
+        "Commands:",
+        "- /status: Quick overview of top 10 endpoints",
+        "- /endpoints: Full list with sync status",
+        "- /check: Run manual sync check",
+        "- /endpoint_add <chain> <url> <name>: Add endpoint",
+        "- /endpoint_remove <name>: Remove endpoint",
+        "",
+        "Data stored in data/endpoints.json and data/state.sqlite.",
       ].join("\n")
     );
   });
 
-  bot.command("analyze", async (ctx) => {
-    const summaries = await getSummaries();
-    if (!summaries.length) {
-      await ctx.reply("No multi-indexer inconsistencies detected in the recent window.");
+  bot.command("endpoints", async (ctx) => {
+    const endpoints = getAll();
+    if (!endpoints.length) {
+      await ctx.reply("No endpoints configured.");
       return;
     }
-    const lines = summaries.map(
-      (s) =>
-        `${s.name}: ${s.distinctIndexers} indexers, range ${formatInt(s.min)} → ${formatInt(
-          s.max
-        )} (Δ ${formatInt(s.spread)}, ${formatPct(s.pct)}), latest ${s.latestIndexer || "n/a"}`
+
+    const lines = await Promise.all(
+      endpoints.map(async (ep) => {
+        const sync = await getSyncStatus(ep.name);
+        const emoji = sync.status === "ok" ? "🟢"
+          : sync.status === "lagging" ? "🔴"
+          : sync.status === "indexing-error" ? "⚠️"
+          : sync.status === "error" ? "❌"
+          : "⚪";
+        const lagStr = sync.lag !== null ? ` lag:${formatLag(sync.lag)}` : "";
+        return `${emoji} ${ep.name} (${ep.chain})${lagStr}`;
+      })
     );
-    const body = lines.join("\n");
-    const ts = new Date().toISOString().replace(/[:.]/g, "-");
-    const filename = `analyze-${ctx.chat.id}-${ts}.md`;
-    const file = new InputFile(Buffer.from(body, "utf-8"), filename);
-    await ctx.replyWithDocument(file).catch((err) => {
-      console.error("Send analyze document failed", err.message);
-      ctx.reply(body).catch(() => { });
-    });
+
+    if (lines.length <= 20) {
+      await ctx.reply(lines.join("\n"));
+    } else {
+      const page1 = lines.slice(0, 20).join("\n");
+      await ctx.reply(`${page1}\n\n... showing 20 of ${lines.length} endpoints`);
+    }
+  });
+
+  bot.command("check", async (ctx) => {
+    await ctx.reply("Running sync checks...");
+    const endpoints = getAll();
+    const { results, alerts } = await runSyncChecks(endpoints, POLL_CONCURRENCY);
+
+    let ok = 0;
+    let lagging = 0;
+    let errors = 0;
+    let fetchFail = 0;
+
+    for (const r of results) {
+      if (r.error) fetchFail++;
+      else if (r.lag !== null && r.lag > SYNC_LAG_THRESHOLD) lagging++;
+      else if (r.hasIndexingErrors) errors++;
+      else ok++;
+    }
+
+    const summary = `Sync check complete:\n🟢 ${ok} ok\n🔴 ${lagging} lagging\n⚠️ ${errors} indexing errors\n❌ ${fetchFail} fetch failures`;
+    const changes = alerts.length > 0 ? `\n\nStatus changes:\n${alerts.slice(0, 5).join("\n")}${alerts.length > 5 ? `\n...and ${alerts.length - 5} more` : ""}` : "";
+    await ctx.reply(summary + changes);
+  });
+
+  bot.command("endpoint_add", async (ctx) => {
+    const text = (ctx.message?.text || "").trim();
+    const parts = text.split(/\s+/);
+
+    if (parts.length < 4) {
+      await ctx.reply("Usage: /endpoint_add <chain> <url> <name>");
+      return;
+    }
+
+    const chain = parts[1];
+    const url = parts[2];
+    const name = parts.slice(3).join(" ");
+
+    const validChains = ["gnosis", "base", "ethereum", "polygon", "arbitrum", "celo", "optimism", "mode"];
+    if (!validChains.includes(chain.toLowerCase())) {
+      await ctx.reply(`Invalid chain. Valid chains: ${validChains.join(", ")}`);
+      return;
+    }
+
+    try {
+      addEndpoint({
+        name,
+        chain: chain.toLowerCase(),
+        url,
+        active: true,
+      });
+      await ctx.reply(`Added endpoint: ${name} (${chain})`);
+    } catch (err) {
+      logger.error({ msg: "endpoint_add failed", error: err.message });
+      await ctx.reply(`Error: ${err.message}`);
+    }
+  });
+
+  bot.command("endpoint_remove", async (ctx) => {
+    const text = (ctx.message?.text || "").trim();
+    const parts = text.split(/\s+/);
+
+    if (parts.length < 2) {
+      await ctx.reply("Usage: /endpoint_remove <name>");
+      return;
+    }
+
+    const name = parts.slice(1).join(" ");
+
+    try {
+      removeEndpoint(name);
+      await ctx.reply(`Removed endpoint: ${name}`);
+    } catch (err) {
+      logger.error({ msg: "endpoint_remove failed", error: err.message });
+      await ctx.reply(`Error: ${err.message}`);
+    }
   });
 
   bot.callbackQuery(/^report:/, async (ctx) => {
@@ -207,9 +259,8 @@ function registerCommands(bot) {
     await ctx.answerCallbackQuery();
     const filename = `report-${reportId}.md`;
     const file = new InputFile(Buffer.from(report, "utf-8"), filename);
-    await ctx.replyWithDocument(file).catch((err) => console.error("Send document failed", err.message));
+    await ctx.replyWithDocument(file).catch((err) => logger.error({ msg: "Send document failed", error: err.message }));
   });
 }
 
 export { registerCommands };
-

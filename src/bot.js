@@ -1,6 +1,7 @@
 import { Bot } from "grammy";
-import { BOT_TOKEN, INTERVAL_MS } from "./config.js";
+import { BOT_TOKEN, SYNC_CHECK_INTERVAL_MS } from "./config.js";
 import { buildPoll, startHeartbeat } from "./jobs.js";
+import { loadEndpoints } from "./endpoints.js";
 import { registerCommands } from "./commands.js";
 import { logger } from "./logger.js";
 
@@ -15,8 +16,9 @@ registerCommands(bot);
 const poll = buildPoll(bot);
 
 const boot = async () => {
+  loadEndpoints();
   await poll();
-  setInterval(poll, INTERVAL_MS);
+  setInterval(poll, SYNC_CHECK_INTERVAL_MS);
   startHeartbeat();
   await bot.start();
 };
@@ -29,4 +31,3 @@ boot().catch((err) => {
 bot.catch = (err) => {
   logger.error({ msg: "Grammy error", error: err.error?.description || err.message });
 };
-
